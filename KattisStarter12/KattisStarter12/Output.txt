@@ -1,0 +1,6 @@
+Put Input Here
+Also Do Not Forget
+ProjectProperties and Paste
+Inputtxt  Outputtxt
+
+TODO Learn the VSIX Settings for automatically setting this up

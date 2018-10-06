@@ -1,0 +1,12 @@
+# Please save this file as .kattisrc in your home directory.
+# This file includes a secret token that allows you to log in.
+# DO NOT SHARE IT WITH ANYONE ELSE.
+# If someone gets access to this token, please revoke it by changing your KATTIS password.
+
+[user]
+username: mark-wardell
+token: aa14d4dd381062429ac55d28c90b65b7715dfe30726ad37847557216cf6261df
+
+[kattis]
+loginurl: https://open.kattis.com/login
+submissionurl: https://open.kattis.com/submit
