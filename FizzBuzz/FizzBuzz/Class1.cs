@@ -1,13 +1,10 @@
 ﻿using System;
-
 namespace FizzBuzz
 {
     class Prog2
     {
         static void Main(string[] args)
         {
-
-        
         int X, Y, N;
         var items = Console.ReadLine().Split(new[] { ' ' });
         X = int.Parse(items[0]);

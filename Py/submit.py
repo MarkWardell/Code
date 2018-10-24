@@ -94,8 +94,10 @@ def login(login_url, username, password=None, token=None):
         login_args['password'] = password
     if token:
         login_args['token'] = token
+        #login_args['token'] = 'foo'
     s = requests.post(login_url, data=login_args, headers=_HEADERS)
     return s
+
 
 
 def login_from_config(cfg):
