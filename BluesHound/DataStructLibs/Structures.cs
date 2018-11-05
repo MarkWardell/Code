@@ -16,11 +16,11 @@ namespace DataStructLibs
     
     public struct Address
     {
-        public Guid Id { get; set; }
-        public string Address1 { get; set; }
-        public string Address2 { get; set; }
-        public string City { get; set; }
-        public US_State State { get; set; }
+        public Guid Id                  { get; set; }
+        public string Address1          { get; set; }
+        public string Address2          { get; set; }
+        public string City              { get; set; }
+        public US_State State           { get; set; }
         public List<string> PhoneNumber { get; set; }
 
     }
