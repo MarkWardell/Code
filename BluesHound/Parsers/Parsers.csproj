@@ -12,14 +12,4 @@
     <PackageReference Include="MSTest.TestFramework" Version="1.3.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\HoundUtil\ContentLib.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Data\TheBluesHound.html">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
 </Project>

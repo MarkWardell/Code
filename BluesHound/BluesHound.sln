@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoundParser", "HoundParser\HoundParser.csproj", "{74DE6A7B-7B66-4234-8FF8-E114EC71338C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HoundParser", "HoundParser\HoundParser.csproj", "{74DE6A7B-7B66-4234-8FF8-E114EC71338C}"
 EndProject
 Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "HoundRG", "HoundRG\HoundRG.deployproj", "{86F23E21-6AED-4E7F-88BD-18546AF198FF}"
 EndProject
@@ -11,13 +11,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cloud", "Cloud", "{F470C45E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Classes", "Classes", "{313108F2-AB62-4BA6-8F06-9D33A4CFAE2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoundUtil", "HoundUtil\HoundUtil.csproj", "{DF272472-56FF-4BF6-840D-DD3CB30D205A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContentLib", "HoundUtil\ContentLib.csproj", "{DF272472-56FF-4BF6-840D-DD3CB30D205A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoundCmdLineDriver", "HoundCmdLineDriver\HoundCmdLineDriver.csproj", "{3BCBCF4B-A822-4314-A212-640F3909B60D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HoundCmdLineDriver", "HoundCmdLineDriver\HoundCmdLineDriver.csproj", "{3BCBCF4B-A822-4314-A212-640F3909B60D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{E203ED17-72F3-449C-98FD-C0769B104E40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest", "UnitTest\UnitTest.csproj", "{E203ED17-72F3-449C-98FD-C0769B104E40}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3BBD55CD-77AC-40AD-955B-846E35197D59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParserLib", "ParserLib\ParserLib.csproj", "{194F5E44-B32F-4763-8635-CB3506AF9C46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructLib", "DataStructLibs\DataStructLib.csproj", "{55A7682D-0E52-477A-ABEA-CCD97CA26A05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{E203ED17-72F3-449C-98FD-C0769B104E40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E203ED17-72F3-449C-98FD-C0769B104E40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E203ED17-72F3-449C-98FD-C0769B104E40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{194F5E44-B32F-4763-8635-CB3506AF9C46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{194F5E44-B32F-4763-8635-CB3506AF9C46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{194F5E44-B32F-4763-8635-CB3506AF9C46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{194F5E44-B32F-4763-8635-CB3506AF9C46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55A7682D-0E52-477A-ABEA-CCD97CA26A05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55A7682D-0E52-477A-ABEA-CCD97CA26A05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55A7682D-0E52-477A-ABEA-CCD97CA26A05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55A7682D-0E52-477A-ABEA-CCD97CA26A05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +68,8 @@ Global
 		{3BCBCF4B-A822-4314-A212-640F3909B60D} = {3BBD55CD-77AC-40AD-955B-846E35197D59}
 		{E203ED17-72F3-449C-98FD-C0769B104E40} = {3BBD55CD-77AC-40AD-955B-846E35197D59}
 		{3BBD55CD-77AC-40AD-955B-846E35197D59} = {313108F2-AB62-4BA6-8F06-9D33A4CFAE2B}
+		{194F5E44-B32F-4763-8635-CB3506AF9C46} = {313108F2-AB62-4BA6-8F06-9D33A4CFAE2B}
+		{55A7682D-0E52-477A-ABEA-CCD97CA26A05} = {313108F2-AB62-4BA6-8F06-9D33A4CFAE2B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FA8C0CDC-F410-4C89-BE90-9988936B9839}

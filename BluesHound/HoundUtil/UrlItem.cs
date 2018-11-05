@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HoundUtil
 {
-    public class UrlItem : INotifyPropertyChanged
+    public class UrlItem : INotifyPropertyChanged, IHtmlItem
     {
         static int count = 1;
         // private static HttpClient myClient;
