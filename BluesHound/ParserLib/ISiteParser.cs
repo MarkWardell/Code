@@ -5,9 +5,10 @@ using System.Threading.Tasks;
 
 namespace HoundUtil
 {
-    public interface ISiteUtil
+   public interface ISiteParser
     {
-      
-        Task<string> GrabCalendar(string url); 
+        Task<string> ParseCalendar  (string html);
+        Task<string> ParseVenues    (string html);
+
     }
 }

@@ -9,17 +9,17 @@ using System.Threading.Tasks;
 
 namespace HoundUtil
 {
-    public class UrlItem : INotifyPropertyChanged, IHtmlItem
+    public class ItemFromUrl :  HtmlItem
     {
         static int count = 1;
         // private static HttpClient myClient;
-        public UrlItem(string url)
+        public ItemFromUrl(string url)
         {
             Url = url;
             ID = ++count;
 
         }
-        public UrlItem(string url, int id)
+        public ItemFromUrl(string url, int id)
         {
             Url = url;
             ID = id;
@@ -56,23 +56,14 @@ namespace HoundUtil
             }
         }
 
-        private string html;
-        public string Html
-        {
-            get { return html; }
-            protected set
-            {
-                html = value;
-                OnPropertyChanged();
-            }
-        }
-        static UrlItem()
+       
+        static ItemFromUrl()
         {
             //myClient = new HttpClient();
 
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+       
 
         public async Task<int> Grab()
         {
@@ -120,17 +111,49 @@ namespace HoundUtil
             return Html.Length;
         }
 
-        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
+       
+
+        public override async Task<int> GrabAsync()
         {
-            var handler = PropertyChanged;
-            if (handler != null)
+            IsDownLoading = true;
+
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Url);
+            var resp = await request.GetResponseAsync();
+            var response = (HttpWebResponse)resp;
+
+            if (response.StatusCode == HttpStatusCode.OK)
             {
-                handler(this, new PropertyChangedEventArgs(propertyName));
+                try
+                {
+                    Stream receiveStream = response.GetResponseStream();
+                    Encoding enCoding = null;
+
+
+                    if (response.CharacterSet == null)
+                    {
+                        enCoding = Encoding.Default;
+                    }
+                    else
+                    {
+                        enCoding = Encoding.GetEncoding(response.CharacterSet);
+                    }
+                    //readStream = new StreamReader(receiveStream, Encoding.GetEncoding(response.CharacterSet));
+                    using (StreamReader readStream = new StreamReader(receiveStream, enCoding))
+
+                    {
+                        Html = await readStream.ReadToEndAsync();
+
+
+                        readStream.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
             }
+            IsDownLoading = false;
+            return Html.Length;
         }
-
-
-
-
     }
 }

@@ -1,26 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace HoundUtil
 {
-    public class SiteUtilFromFile : ISiteUtil
+    public class ItemFromFile : HtmlItem
     {
 
-        public async Task<string> GrabCalendar(string fileName)
+        private string fileName;
+        public ItemFromFile(string fName)
         {
-            string retVal = string.Empty;
-            if (System.IO.File.Exists(fileName))
-            {
-
-                retVal = await ReadTextAsync(fileName);
-
-            }
-            else
-                await Task.Delay(10);
-            return retVal;
+            fileName = fName;
+        }
+        public override async Task<int> GrabAsync()
+        {
+            string html =  await ReadTextAsync(fileName);
+            return html.Length;
         }
         private async Task<string> ReadTextAsync(string filePath)
         {
