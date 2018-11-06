@@ -2,10 +2,11 @@
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 
-namespace HoundUtil
+namespace ContentLib
 {
     public abstract class HtmlItem
     {
+        
         protected string html;
         public string Html
         {

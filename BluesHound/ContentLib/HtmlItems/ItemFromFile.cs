@@ -5,7 +5,7 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HoundUtil
+namespace ContentLib
 {
     public class ItemFromFile : HtmlItem
     {
